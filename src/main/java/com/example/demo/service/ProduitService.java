@@ -11,31 +11,31 @@ import com.example.demo.repository.ProduitRepository;
 
 @Service
 @Primary //on a deux service alors avec cette annotation cette class est la premiere
-public class ProduitService implements IProduitService{
+public class ProduitService implements ICrudService<Produit, Long>{
 	
 	@Autowired
 	private ProduitRepository produitRepository;
 	
 	@Override
-	public List<Produit> getProduits() {
+	public List<Produit> getAll() {
 		
 		return produitRepository.findAll();
 	}
 
 	@Override
-	public void addProduit(Produit produit) {
+	public void add(Produit produit) {
 		produitRepository.save(produit);
 		
 	}
 
 	@Override
-	public void updateProduit(Produit produit) {
+	public void update(Produit produit) {
 		
 		produitRepository.save(produit);
 	}
 
 	@Override
-	public void deleteProduit(Long id) {
+	public void delete(Long id) {
 		Produit produit=new Produit();
 		produit.setId(id);
 		produitRepository.delete(produit);
