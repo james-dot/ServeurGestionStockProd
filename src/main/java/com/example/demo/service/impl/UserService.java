@@ -1,4 +1,4 @@
-package com.example.demo.service;
+package com.example.demo.service.impl;
 
 import java.util.List;
 
@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.example.demo.entity.User;
 
 import com.example.demo.repository.UserRepository;
+import com.example.demo.service.ICrudService;
 
 @Service
 @Primary //on a deux service alors avec cette annotation cette class est la premiere

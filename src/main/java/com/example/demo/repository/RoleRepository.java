@@ -7,4 +7,5 @@ import com.example.demo.entity.Role;
 @Repository
 public interface RoleRepository extends JpaRepository<Role, Long>{
 
+	Role findByName(String name); //spring jpa qui offert la creation des nouveaux methodes 
 }
