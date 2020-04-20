@@ -44,4 +44,10 @@ public class UserService implements ICrudService<User, Long>{
 		
 	}
 
+	@Override
+	public void saveAll(Iterable<User> iterable) { //a partir d'un fichier
+		userRepository.saveAll(iterable);
+		
+	}
+
 }
